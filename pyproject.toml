@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slopguard"
+version = "1.0.0"
+description = "Language-agnostic agent that finds security issues, AI slop, coding gaps and loose ends."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+slopguard = "slopguard.cli:main"
+
+[tool.setuptools]
+packages = ["slopguard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
