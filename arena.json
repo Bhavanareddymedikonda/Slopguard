@@ -1,0 +1,22 @@
+{
+  "title": "SlopGuard",
+  "description": "A language-agnostic agent that finds security issues, AI slop, coding gaps and loose ends in any codebase, with ranked reports, a health score and optional LLM triage.",
+  "track": "AI triage",
+  "repo": "https://github.com/Bhavanareddymedikonda/Slopguard",
+  "author": {
+    "github": "Bhavanareddymedikonda"
+  },
+  "language": "Python",
+  "requires": "Python 3.9+ (no third-party dependencies)",
+  "install": "git clone https://github.com/Bhavanareddymedikonda/Slopguard.git && cd Slopguard",
+  "run": "python -m slopguard <path-or-github-url> -f markdown -o report.md",
+  "test": "python -m pytest -q",
+  "demo": "python -m slopguard examples/vulnerable_app",
+  "llm": {
+    "optional": true,
+    "env": ["ANTHROPIC_API_KEY", "OPENAI_API_KEY"],
+    "flag": "--llm"
+  },
+  "outputs": ["text", "markdown", "json", "sarif"],
+  "tags": ["security", "code-quality", "ai-slop", "static-analysis", "language-agnostic"]
+}
